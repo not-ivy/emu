@@ -20,7 +20,7 @@ export default function Index() {
             <button className="text-xl font-bold bg-violet-700 px-7 py-3 m-1 rounded-md">Apply</button>
           </div>
         </div>
-        <div className="p-28" />
+        <div className="p-20 md:p-32" />
         <div className="max-w-screen-sm">
           <p className="font-extrabold text-5xl">We are building the fluffiest social network.</p>
           <div className="p-4" />
