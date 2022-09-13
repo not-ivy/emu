@@ -1,32 +1,33 @@
-import { useState } from 'preact/hooks'
-import preactLogo from './assets/preact.svg'
-import './app.css'
+import Icon from "./components/Icon";
+import { FaDiscord, FaGithub, FaTwitter } from 'react-icons/fa';
 
 export function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" class="logo" alt="Vite logo" />
-        </a>
-        <a href="https://preactjs.com" target="_blank">
-          <img src={preactLogo} class="logo preact" alt="Preact logo" />
-        </a>
+      <div className='flex justify-between items-center'>
+        <span className="flex items-center">
+          <Icon className="stroke-violet-700 h-10 m-4" />
+          <span className="text-3xl font-bold">Puroto</span>
+        </span>
+        <div className="hidden md:flex justify-around flex-col lg:flex-row ">
+          <button className="text-xl font-bold bg-fuchsia-600 px-7 py-3 m-1 rounded-md">Support Us</button>
+          <button className="text-xl font-bold bg-violet-700 px-7 py-3 m-1 rounded-md">Apply</button>
+        </div>
+        <div className="md:hidden flex flex-col">
+          <a>Support Us</a>
+          <a>Apply</a>
+        </div>
       </div>
-      <h1>Vite + Preact</h1>
-      <div class="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/app.tsx</code> and save to test HMR
-        </p>
+      <div className="p-28"/>
+      <div className="max-w-screen-sm">
+        <p className="font-extrabold text-5xl">We are building the fluffiest social network.</p>
+        <div className="p-4"/>
+        <div className="flex justify-between font-semibold text-xl">
+        <a className="flex items-center text-black dark:text-white" target="_blank" href="#"><div className="m-2"><FaGithub size='2rem' /></div> Github</a>
+        <a className="flex items-center text-sky-500" target="_blank" href="#"><div className="m-2"><FaTwitter size='2rem' /></div> Twitter</a>
+        <a className="flex items-center text-blue-600" target="_blank" href="#"><div className="m-2"><FaDiscord size='2rem' /></div> Discord</a>
+        </div>
       </div>
-      <p class="read-the-docs">
-        Click on the Vite and Preact logos to learn more
-      </p>
     </>
   )
 }
