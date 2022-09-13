@@ -10,13 +10,9 @@ export default function Index() {
         <Icon className="stroke-violet-700 h-10 m-4" />
         <span className="text-3xl font-bold">Puroto</span>
       </span>
-      <div className="hidden md:flex justify-around flex-col lg:flex-row">
+      <div className="flex justify-around flex-col lg:flex-row">
         <button className="text-xl font-bold bg-fuchsia-600 px-7 py-3 m-1 rounded-md">Support Us</button>
         <button className="text-xl font-bold bg-violet-700 px-7 py-3 m-1 rounded-md">Apply</button>
-      </div>
-      <div className="md:hidden flex flex-col">
-        <a>Support Us</a>
-        <a>Apply</a>
       </div>
     </div>
     <div className="p-28"/>
