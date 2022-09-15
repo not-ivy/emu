@@ -11,7 +11,7 @@ export default function Home() {
         <title>Puroto</title>
       </Head>
       <div className="p-4 md:px-20 text-purple-200 grid grid-cols-7 grid-flow-row gap-x-4 md:gap-x-10 gap-y-4 md:gap-y-10">
-        <div className="col-span-7 flex justify-between items-end">
+        <div className="col-span-7 flex justify-between items-center">
           <Link href='/'>
             <span className="flex items-center cursor-pointer">
               <Icon className="stroke-violet-700 h-10 m-4" />
