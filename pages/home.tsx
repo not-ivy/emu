@@ -15,9 +15,9 @@ export default function Home() {
             <Icon className="stroke-violet-700 h-10 m-4" />
             <span className="text-3xl font-bold hidden md:block">Puroto</span>
           </span>
-          <div className="bg-zinc-600 flex flex-row rounded-lg items-center h-3/4 p-4">
+          <div className="bg-slate-600 flex flex-row rounded-lg items-center h-3/4 p-4">
             <HiOutlineSearch className="w-6 h-6 mr-0 md:mr-4" />
-            <input className="hidden md:block bg-zinc-600 text-purple-200 caret-purple-200 outline-none" placeholder="Search"></input>
+            <input className="hidden md:block bg-slate-600 text-purple-200 caret-purple-200 outline-none" placeholder="Search"></input>
           </div>
         </div>
         <div className="col-span-2 flex flex-col items-end border-purple-200 border-r md:border-none">
@@ -28,25 +28,25 @@ export default function Home() {
             <button className="flex items-center"><HiOutlineUser className="w-10 h-10 m-2 md:w-8 md:h-8" /><span className="hidden md:block">Profile</span></button>
             <button className="flex items-center"><HiOutlineDotsHorizontal className="w-10 h-10 m-2 md:w-8 md:h-8" /><span className="hidden md:block">More</span></button>
           </div>
-          <p className="text-zinc-500 text-xs text-right">
+          <p className="text-slate-500 text-xs text-right">
             Design by ivy on {new Intl.DateTimeFormat().format(new Date(1663219109000))} <br />
             This website is not affliated with the actual puroto organization <br />
             I just made this for fun (for now)
           </p>
         </div>
         <div className="grid grid-flow-row grid-cols-1 gap-y-8 h-screen col-span-5 md:col-span-3  ">
-          <div className="bg-zinc-600 rounded-md" />
-          <div className="bg-zinc-600 rounded-md" />
+          <div className="bg-slate-600 rounded-md" />
+          <div className="bg-slate-600 rounded-md" />
         </div>
-        <div className="col-span-2 bg-zinc-600 rounded-md max-h-min p-4 hidden md:block">
+        <div className="col-span-2 bg-slate-600 rounded-md max-h-min p-4 hidden md:block">
           <h3 className="text-xl font-semibold mb-10">Latest News</h3>
           <div className="flex flex-col">
             <div className="grid grid-cols-4 h-20">
-              <div className="hidden md:block bg-zinc-500 rounded-md col-span-1 mr-4"></div>
+              <div className="hidden md:block bg-slate-500 rounded-md col-span-1 mr-4"></div>
               <div className="col-span-3 flex flex-col justify-between">
-                <div className="h-7 rounded-lg bg-zinc-500 w-full"></div>
-                <div className="h-4 rounded-lg bg-zinc-500 w-3/4"></div>
-                <div className="h-4 rounded-lg bg-zinc-500 w-1/3"></div>
+                <div className="h-7 rounded-lg bg-slate-500 w-full"></div>
+                <div className="h-4 rounded-lg bg-slate-500 w-3/4"></div>
+                <div className="h-4 rounded-lg bg-slate-500 w-1/3"></div>
               </div>
             </div>
           </div>
