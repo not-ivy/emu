@@ -2,6 +2,7 @@ import Icon from "../components/Icon";
 import { HiOutlineSearch, HiHome, HiOutlineChatAlt2, HiOutlineUser, HiOutlineDotsHorizontal } from 'react-icons/hi';
 import Image from "next/image";
 import Head from 'next/head';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -11,10 +12,12 @@ export default function Home() {
       </Head>
       <div className="p-4 md:px-20 text-purple-200 grid grid-cols-7 grid-flow-row gap-x-4 md:gap-x-10 gap-y-4 md:gap-y-10">
         <div className="col-span-7 flex justify-between items-end">
-          <span className="flex items-center">
-            <Icon className="stroke-violet-700 h-10 m-4" />
-            <span className="text-3xl font-bold hidden md:block">Puroto</span>
-          </span>
+          <Link href='/'>
+            <span className="flex items-center cursor-pointer">
+              <Icon className="stroke-violet-700 h-10 m-4" />
+              <span className="text-3xl font-bold hidden md:block">Puroto</span>
+            </span>
+          </Link>
           <div className="bg-slate-600 flex flex-row rounded-lg items-center h-3/4 p-4">
             <HiOutlineSearch className="w-6 h-6 mr-0 md:mr-4" />
             <input className="hidden md:block bg-slate-600 text-purple-200 caret-purple-200 outline-none" placeholder="Search"></input>
