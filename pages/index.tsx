@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import { FaDiscord, FaGithub, FaTwitter } from 'react-icons/fa';
 
 import Icon from '../components/Icon'
@@ -17,7 +18,8 @@ export default function Index() {
           </span>
           <div className="flex justify-around flex-col lg:flex-row">
             <button className="text-xl font-bold bg-fuchsia-600 px-7 py-3 m-1 rounded-md">Support Us</button>
-            <button className="text-xl font-bold bg-violet-700 px-7 py-3 m-1 rounded-md">Apply</button>
+            <button className="text-xl font-bold bg-violet-600 px-7 py-3 m-1 rounded-md">Apply</button>
+            <Link href='/home'><button className="text-xl font-bold bg-green-600 px-7 py-3 m-1 rounded-md">Home</button></Link>
           </div>
         </div>
         <div className="p-20 md:p-32" />
