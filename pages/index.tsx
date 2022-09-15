@@ -10,7 +10,7 @@ export default function Index() {
       <Head>
         <title>Puroto</title>
       </Head>
-      <div className='p-4 md:px-20 dark:text-purple-200 text-slate-800'>
+      <div className='p-4 md:px-20 text-purple-200'>
         <div className='flex justify-between items-center'>
           <span className="flex items-center">
             <Icon className="stroke-violet-700 h-10 m-4" />
@@ -27,7 +27,7 @@ export default function Index() {
           <p className="font-extrabold text-5xl">We are building the fluffiest social network.</p>
           <div className="p-4" />
           <div className="flex justify-between font-semibold text-xl flex-col md:flex-row ">
-            <a className="flex items-center text-black dark:text-white" target="_blank" href="#"><div className="m-2"><FaGithub size='2rem' /></div> Github</a>
+            <a className="flex items-center text-white dark:text-black" target="_blank" href="#"><div className="m-2"><FaGithub size='2rem' /></div> Github</a>
             <a className="flex items-center text-[#1c9cf0]" target="_blank" href="#"><div className="m-2"><FaTwitter size='2rem' /></div> Twitter</a>
             <a className="flex items-center text-[#5865F2]" target="_blank" href="#"><div className="m-2"><FaDiscord size='2rem' /></div> Discord</a>
           </div>
