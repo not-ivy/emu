@@ -1,9 +1,10 @@
 import Icon from "../components/Icon";
 import { HiArrowLeft, HiArrowRight } from 'react-icons/hi';
+import { BiArrowToTop, BiCommand } from 'react-icons/bi';
 import Head from 'next/head';
 import Link from 'next/link';
 import Tabs from "../components/Tabs";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Search from "../components/Search";
 import Profile from "../components/Profile";
 
@@ -12,6 +13,18 @@ type Tabs = 'home' | 'messages' | 'profile' | 'more';
 export default function Home() {
   const [selectedTab, setSelectedTab] = useState<Tabs>('home');
   const [searchVisibility, setSearchVisibility] = useState(false);
+
+  useEffect(() => {
+    const openSearch = (event: KeyboardEvent) => {
+      if (event.key === "k" && event.metaKey) {
+        event.preventDefault();
+        setSearchVisibility(true);
+      }
+    }
+    document.addEventListener('keydown', openSearch);
+    return () => { document.removeEventListener('keydown', openSearch) };
+  }, [setSearchVisibility])
+
   return (
     <>
       <Head>
@@ -27,6 +40,10 @@ export default function Home() {
             </span>
           </Link>
           <div className="flex items-center justify-between">
+            <div className="hidden md:flex bg-slate-700 items-center p-2 border-slate-600 border-4 rounded-md cursor-pointer" onClick={() => {setSearchVisibility(true)}}>
+              <span className="p-2 w-8 h-8 mx-2 bg-slate-600 rounded-md"><BiCommand /></span>
+              <span className="p-2 w-8 h-8 mx-2 bg-slate-600 rounded-md flex items-center justify-center">K</span>
+            </div>
             <Profile />
           </div>
         </div>
@@ -38,7 +55,6 @@ export default function Home() {
               This website is not affliated with the actual puroto organization <br />
               I just made this for fun (for now)
             </p>
-            <button onClick={() => {setSearchVisibility(true)}}>Show search bar</button>
           </div>
         </nav>
         <main className="col-span-5 md:col-span-3">
