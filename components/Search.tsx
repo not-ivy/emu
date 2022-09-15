@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction, useEffect, useState } from "react";
+import { Dispatch, SetStateAction, useEffect } from "react";
 import { HiOutlineSearch } from "react-icons/hi";
 
 export default function Search(props: { visibility: boolean, setVisibility: Dispatch<SetStateAction<boolean>> }) {
