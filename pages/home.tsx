@@ -1,10 +1,11 @@
 import Icon from "../components/Icon";
-import { HiOutlineSearch, HiHome, HiOutlineChatAlt2, HiOutlineUser, HiOutlineDotsHorizontal, HiArrowLeft, HiArrowRight } from 'react-icons/hi';
-import Image from "next/image";
+import { HiArrowLeft, HiArrowRight } from 'react-icons/hi';
 import Head from 'next/head';
 import Link from 'next/link';
 import Tabs from "../components/Tabs";
 import { useState } from "react";
+import Search from "../components/Search";
+import Profile from "../components/Profile";
 
 type Tabs = 'home' | 'messages' | 'profile' | 'more';
 
@@ -23,14 +24,10 @@ export default function Home() {
               <span className="text-3xl font-bold hidden md:block">Puroto</span>
             </span>
           </Link>
-          <div className="flex items-center justify-center">
-            <div className="bg-slate-600 flex flex-row rounded-lg items-center h-3/4 p-4">
-              <HiOutlineSearch className="w-6 h-6 mr-0 md:mr-4" />
-              <input className="hidden md:block bg-slate-600 text-purple-200 caret-purple-200 outline-none" placeholder="Search"></input>
-            </div>
-            <div className="hidden md:block m-4"><Image src='/profile.png' alt='user profile' className="rounded-full" width={50} height={50} /></div>
+          <div className="flex items-center justify-between">
+            <Search />
+            <Profile />
           </div>
-
         </div>
         <nav className="relative col-span-2 flex flex-col items-end border-purple-200 border-r md:border-none">
           <div className="sticky top-4">
