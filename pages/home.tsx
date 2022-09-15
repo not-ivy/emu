@@ -42,7 +42,7 @@ export default function Home() {
         <main className="col-span-5 md:col-span-3">
           <div className="flex justify-around items-center mb-4 mx-auto">
             <HiArrowLeft />
-            <input className="bg-slate-600 text-purple-200 caret-purple-200 outline-none rounded-md p-4 text-center" value='1'></input>
+            <input className="bg-slate-600 text-purple-200 caret-purple-200 outline-none rounded-md p-4 text-center" placeholder='1'></input>
             <HiArrowRight />
           </div>
           <div className="grid grid-flow-row grid-cols-1 gap-y-8 h-screen snap-y overflow-y-scroll">
