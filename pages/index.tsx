@@ -24,10 +24,10 @@ export default function Index() {
         <div className="max-w-screen-sm">
           <p className="font-extrabold text-5xl">We are building the fluffiest social network.</p>
           <div className="p-4" />
-          <div className="flex justify-between font-semibold text-xl">
+          <div className="flex justify-between font-semibold text-xl flex-col md:flex-row ">
             <a className="flex items-center text-black dark:text-white" target="_blank" href="#"><div className="m-2"><FaGithub size='2rem' /></div> Github</a>
-            <a className="flex items-center text-sky-500" target="_blank" href="#"><div className="m-2"><FaTwitter size='2rem' /></div> Twitter</a>
-            <a className="flex items-center text-blue-600" target="_blank" href="#"><div className="m-2"><FaDiscord size='2rem' /></div> Discord</a>
+            <a className="flex items-center text-[#1c9cf0]" target="_blank" href="#"><div className="m-2"><FaTwitter size='2rem' /></div> Twitter</a>
+            <a className="flex items-center text-[#5865F2]" target="_blank" href="#"><div className="m-2"><FaDiscord size='2rem' /></div> Discord</a>
           </div>
         </div>
       </div>
