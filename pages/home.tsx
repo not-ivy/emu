@@ -1,5 +1,5 @@
 import Icon from "../components/Icon";
-import { HiOutlineSearch, HiHome, HiChatAlt, HiUser, HiDotsHorizontal } from 'react-icons/hi';
+import { HiOutlineSearch, HiHome, HiOutlineChatAlt2, HiOutlineUser, HiOutlineDotsHorizontal } from 'react-icons/hi';
 import Image from "next/image";
 import Head from 'next/head';
 
@@ -24,10 +24,15 @@ export default function Home() {
           <div className="hidden md:block m-4"><Image src='/profile.png' alt='user profile' className="rounded-md" width={150} height={150} /></div>
           <div className="dark:text-purple-900 text-slate-600 font-bold text-2xl flex flex-col items-end">
             <button className="dark:text-purple-200 text-slate-800 flex items-center"><HiHome className="w-10 h-10 m-2 md:w-8 md:h-8" /><span className="hidden md:block">Home</span></button>
-            <button className="flex items-center"><HiChatAlt className="w-10 h-10 m-2 md:w-8 md:h-8" /><span className="hidden md:block">Messages</span></button>
-            <button className="flex items-center"><HiUser className="w-10 h-10 m-2 md:w-8 md:h-8" /><span className="hidden md:block">Profile</span></button>
-            <button className="flex items-center"><HiDotsHorizontal className="w-10 h-10 m-2 md:w-8 md:h-8" /><span className="hidden md:block">More</span></button>
+            <button className="flex items-center"><HiOutlineChatAlt2 className="w-10 h-10 m-2 md:w-8 md:h-8" /><span className="hidden md:block">Messages</span></button>
+            <button className="flex items-center"><HiOutlineUser className="w-10 h-10 m-2 md:w-8 md:h-8" /><span className="hidden md:block">Profile</span></button>
+            <button className="flex items-center"><HiOutlineDotsHorizontal className="w-10 h-10 m-2 md:w-8 md:h-8" /><span className="hidden md:block">More</span></button>
           </div>
+          <p className="text-zinc-500 text-xs text-right">
+            Design by ivy on {new Intl.DateTimeFormat().format(new Date(1663219109000))} <br />
+            This website is not affliated with the actual puroto organization <br />
+            I just made this for fun (for now)
+          </p>
         </div>
         <div className="grid grid-flow-row grid-cols-1 gap-y-8 h-screen col-span-5 md:col-span-3  ">
           <div className="bg-zinc-600 rounded-md" />
