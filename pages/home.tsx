@@ -1,6 +1,5 @@
 import Icon from "../components/Icon";
 import { HiArrowLeft, HiArrowRight } from 'react-icons/hi';
-import { BiArrowToTop, BiCommand } from 'react-icons/bi';
 import Head from 'next/head';
 import Link from 'next/link';
 import Tabs from "../components/Tabs";
@@ -14,23 +13,11 @@ export default function Home() {
   const [selectedTab, setSelectedTab] = useState<Tabs>('home');
   const [searchVisibility, setSearchVisibility] = useState(false);
 
-  useEffect(() => {
-    const openSearch = (event: KeyboardEvent) => {
-      if (event.key === "k" && event.metaKey) {
-        event.preventDefault();
-        setSearchVisibility(true);
-      }
-    }
-    document.addEventListener('keydown', openSearch);
-    return () => { document.removeEventListener('keydown', openSearch) };
-  }, [setSearchVisibility])
-
   return (
     <>
       <Head>
         <title>Puroto</title>
       </Head>
-      <Search visibility={searchVisibility} setVisibility={setSearchVisibility} />
       <div className="p-4 md:px-20 text-purple-200 grid grid-cols-7 grid-flow-row gap-x-4 md:gap-x-10 gap-y-4 md:gap-y-10">
         <div className="col-span-7 flex justify-between items-center">
           <Link href='/'>
@@ -40,10 +27,7 @@ export default function Home() {
             </span>
           </Link>
           <div className="flex items-center justify-between">
-            <div className="hidden md:flex bg-slate-700 items-center p-2 border-slate-600 border-4 rounded-md cursor-pointer" onClick={() => {setSearchVisibility(true)}}>
-              <span className="p-2 w-8 h-8 mx-2 bg-slate-600 rounded-md"><BiCommand /></span>
-              <span className="p-2 w-8 h-8 mx-2 bg-slate-600 rounded-md flex items-center justify-center">K</span>
-            </div>
+            <Search visibility={searchVisibility} setVisibility={setSearchVisibility} />
             <Profile />
           </div>
         </div>
