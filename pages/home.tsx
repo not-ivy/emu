@@ -11,11 +11,13 @@ type Tabs = 'home' | 'messages' | 'profile' | 'more';
 
 export default function Home() {
   const [selectedTab, setSelectedTab] = useState<Tabs>('home');
+  const [searchVisibility, setSearchVisibility] = useState(false);
   return (
     <>
       <Head>
         <title>Puroto</title>
       </Head>
+      <Search visibility={searchVisibility} setVisibility={setSearchVisibility} />
       <div className="p-4 md:px-20 text-purple-200 grid grid-cols-7 grid-flow-row gap-x-4 md:gap-x-10 gap-y-4 md:gap-y-10">
         <div className="col-span-7 flex justify-between items-center">
           <Link href='/'>
@@ -25,7 +27,6 @@ export default function Home() {
             </span>
           </Link>
           <div className="flex items-center justify-between">
-            <Search />
             <Profile />
           </div>
         </div>
@@ -37,6 +38,7 @@ export default function Home() {
               This website is not affliated with the actual puroto organization <br />
               I just made this for fun (for now)
             </p>
+            <button onClick={() => {setSearchVisibility(true)}}>Show search bar</button>
           </div>
         </nav>
         <main className="col-span-5 md:col-span-3">
@@ -51,7 +53,7 @@ export default function Home() {
             <div className="bg-slate-600 rounded-md" />
           </div>
         </main>
-        <div className="col-span-2 bg-slate-600 rounded-md max-h-min p-4 hidden md:block">
+        <div className="col-span-2 bg-slate-600 rounded-md h-1/4 p-4 hidden md:block">
           <h3 className="text-xl font-semibold mb-10">Latest News</h3>
           <div className="flex flex-col">
             <div className="grid grid-cols-4 h-20">
