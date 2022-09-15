@@ -23,16 +23,19 @@ export default function Home() {
               <span className="text-3xl font-bold hidden md:block">Puroto</span>
             </span>
           </Link>
-          <div className="bg-slate-600 flex flex-row rounded-lg items-center h-3/4 p-4">
-            <HiOutlineSearch className="w-6 h-6 mr-0 md:mr-4" />
-            <input className="hidden md:block bg-slate-600 text-purple-200 caret-purple-200 outline-none" placeholder="Search"></input>
+          <div className="flex items-center justify-center">
+            <div className="bg-slate-600 flex flex-row rounded-lg items-center h-3/4 p-4">
+              <HiOutlineSearch className="w-6 h-6 mr-0 md:mr-4" />
+              <input className="hidden md:block bg-slate-600 text-purple-200 caret-purple-200 outline-none" placeholder="Search"></input>
+            </div>
+            <div className="hidden md:block m-4"><Image src='/profile.png' alt='user profile' className="rounded-full" width={50} height={50} /></div>
           </div>
+
         </div>
         <nav className="relative col-span-2 flex flex-col items-end border-purple-200 border-r md:border-none">
           <div className="sticky top-4">
-            <div className="hidden md:block"><Image src='/profile.png' alt='user profile' className="rounded-md" width={150} height={150} /></div>
             <Tabs selected={selectedTab} setSelectedTab={setSelectedTab} />
-            <p className="text-slate-500 text-xs text-right">
+            <p className="text-slate-500 text-xs text-right hidden md:block">
               Design by ivy on {new Intl.DateTimeFormat().format(new Date(1663219109000))} <br />
               This website is not affliated with the actual puroto organization <br />
               I just made this for fun (for now)
