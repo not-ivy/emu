@@ -23,21 +23,23 @@ export default function Home() {
             <input className="hidden md:block bg-slate-600 text-purple-200 caret-purple-200 outline-none" placeholder="Search"></input>
           </div>
         </div>
-        <div className="col-span-2 flex flex-col items-end border-purple-200 border-r md:border-none">
-          <div className="hidden md:block"><Image src='/profile.png' alt='user profile' className="rounded-md" width={150} height={150} /></div>
-          <div className="text-purple-400 font-bold text-2xl flex flex-col items-end">
-            <button className="text-purple-200 flex items-center"><HiHome className="w-10 h-10 m-2 md:w-8 md:h-8" /><span className="hidden md:block">Home</span></button>
-            <button className="flex items-center"><HiOutlineChatAlt2 className="w-10 h-10 m-2 md:w-8 md:h-8" /><span className="hidden md:block">Messages</span></button>
-            <button className="flex items-center"><HiOutlineUser className="w-10 h-10 m-2 md:w-8 md:h-8" /><span className="hidden md:block">Profile</span></button>
-            <button className="flex items-center"><HiOutlineDotsHorizontal className="w-10 h-10 m-2 md:w-8 md:h-8" /><span className="hidden md:block">More</span></button>
+        <nav className="relative col-span-2 flex flex-col items-end border-purple-200 border-r md:border-none">
+          <div className="sticky top-4">
+            <div className="hidden md:block"><Image src='/profile.png' alt='user profile' className="rounded-md" width={150} height={150} /></div>
+            <div className="text-purple-400 font-bold text-2xl flex flex-col items-end">
+              <button className="text-purple-200 flex items-center"><HiHome className="w-10 h-10 m-2 md:w-8 md:h-8" /><span className="hidden md:block">Home</span></button>
+              <button className="flex items-center"><HiOutlineChatAlt2 className="w-10 h-10 m-2 md:w-8 md:h-8" /><span className="hidden md:block">Messages</span></button>
+              <button className="flex items-center"><HiOutlineUser className="w-10 h-10 m-2 md:w-8 md:h-8" /><span className="hidden md:block">Profile</span></button>
+              <button className="flex items-center"><HiOutlineDotsHorizontal className="w-10 h-10 m-2 md:w-8 md:h-8" /><span className="hidden md:block">More</span></button>
+            </div>
+            <p className="text-slate-500 text-xs text-right">
+              Design by ivy on {new Intl.DateTimeFormat().format(new Date(1663219109000))} <br />
+              This website is not affliated with the actual puroto organization <br />
+              I just made this for fun (for now)
+            </p>
           </div>
-          <p className="text-slate-500 text-xs text-right">
-            Design by ivy on {new Intl.DateTimeFormat().format(new Date(1663219109000))} <br />
-            This website is not affliated with the actual puroto organization <br />
-            I just made this for fun (for now)
-          </p>
-        </div>
-        <div className="col-span-5 md:col-span-3">
+        </nav>
+        <main className="col-span-5 md:col-span-3">
           <div className="flex justify-around items-center mb-4 mx-auto">
             <HiArrowLeft />
             <input className="bg-slate-600 text-purple-200 caret-purple-200 outline-none rounded-md p-4 text-center" value='1'></input>
@@ -48,7 +50,7 @@ export default function Home() {
             <div className="bg-slate-600 rounded-md" />
             <div className="bg-slate-600 rounded-md" />
           </div>
-        </div>
+        </main>
         <div className="col-span-2 bg-slate-600 rounded-md max-h-min p-4 hidden md:block">
           <h3 className="text-xl font-semibold mb-10">Latest News</h3>
           <div className="flex flex-col">
