@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div className="p-4 md:px-20 dark:text-purple-200 text-slate-800 grid grid-cols-7 grid-flow-row gap-x-4 md:gap-x-10 gap-y-4 md:gap-y-10">
-      <div className="col-span-7 flex justify-between items-center md:items-end">
+      <div className="col-span-7 flex justify-between items-end">
         <span className="flex items-center">
           <Icon className="stroke-purple-200 h-10 m-4" />
           <span className="text-3xl font-bold hidden md:block">Puroto</span>
@@ -15,7 +15,7 @@ export default function Home() {
           <input className="hidden md:block bg-zinc-600 dark:text-purple-200 dark:caret-purple-200 text-slate-800 outline-none" placeholder="Search"></input>
         </div>
       </div>
-      <div className="col-span-2 flex flex-col items-start border-purple-200 border-r md:border-none">
+      <div className="col-span-2 flex flex-col items-end border-purple-200 border-r md:border-none">
         <div className="hidden md:block m-4"><Image src='/profile.png' alt='user profile' className="rounded-md" width={150} height={150} /></div>
         <div className="dark:text-purple-900 text-slate-600 font-bold text-2xl flex flex-col items-end">
           <button className="dark:text-purple-200 text-slate-800 flex items-center"><HiHome className="w-10 h-10 m-2 md:w-8 md:h-8" /><span className="hidden md:block">Home</span></button>
