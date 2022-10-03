@@ -1,10 +1,12 @@
-import { Dispatch, SetStateAction, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { HiOutlineSearch } from "react-icons/hi";
 import { BiCommand } from 'react-icons/bi';
+import { useSearch } from "../hooks/search";
 
 
-export default function Search(props: { visibility: boolean, setVisibility: Dispatch<SetStateAction<boolean>> }) {
-  const { visibility, setVisibility } = props;
+export default function Search() {
+  const visibility = useSearch((state) => state.visibility);
+  const setVisibility = (visibility: boolean) => { useSearch.setState({ visibility }) }
   const inputRef = useRef(null);
 
   useEffect(() => {
@@ -24,7 +26,7 @@ export default function Search(props: { visibility: boolean, setVisibility: Disp
     }
     document.addEventListener('keydown', exitSearch);
     return () => { document.removeEventListener('keydown', exitSearch); document.removeEventListener('keydown', openSearch) };
-  }, [setVisibility, visibility])
+  }, [visibility])
 
   return (
     <>

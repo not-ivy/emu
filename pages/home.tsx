@@ -3,16 +3,13 @@ import { HiArrowLeft, HiArrowRight } from 'react-icons/hi';
 import Head from 'next/head';
 import Link from 'next/link';
 import Tabs from "../components/Tabs";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Search from "../components/Search";
 import Profile from "../components/Profile";
 
 type Tabs = 'home' | 'messages' | 'profile' | 'more';
 
 export default function Home() {
-  const [selectedTab, setSelectedTab] = useState<Tabs>('home');
-  const [searchVisibility, setSearchVisibility] = useState(false);
-
   return (
     <>
       <Head>
@@ -27,13 +24,13 @@ export default function Home() {
             </span>
           </Link>
           <div className="flex items-center justify-between">
-            <Search visibility={searchVisibility} setVisibility={setSearchVisibility} />
+            <Search />
             <Profile />
           </div>
         </div>
         <nav className="relative col-span-2 flex flex-col items-end border-purple-200 border-r md:border-none">
           <div className="sticky top-4">
-            <Tabs selected={selectedTab} setSelectedTab={setSelectedTab} />
+            <Tabs />
             <p className="text-slate-500 text-xs text-right hidden md:block">
               Design by ivy on {new Intl.DateTimeFormat().format(new Date(1663219109000))} <br />
               This website is not affliated with the actual puroto organization <br />
