@@ -3,7 +3,6 @@ import { HiArrowLeft, HiArrowRight } from 'react-icons/hi';
 import Head from 'next/head';
 import Link from 'next/link';
 import Tabs from "../components/Tabs";
-import { useState } from "react";
 import Search from "../components/Search";
 import Profile from "../components/Profile";
 
