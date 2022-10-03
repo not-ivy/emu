@@ -18,7 +18,7 @@ export default function Index() {
           </span>
           <div className="flex justify-around flex-col lg:flex-row">
             <button className="text-xl font-bold bg-fuchsia-600 px-7 py-3 m-1 rounded-md">Support Us</button>
-            <button className="text-xl font-bold bg-violet-600 px-7 py-3 m-1 rounded-md">Apply</button>
+            <Link href='/signup'><button className="text-xl font-bold bg-violet-600 px-7 py-3 m-1 rounded-md">Sign Up</button></Link>
             <Link href='/home'><button className="text-xl font-bold bg-green-600 px-7 py-3 m-1 rounded-md">Home</button></Link>
           </div>
         </div>
