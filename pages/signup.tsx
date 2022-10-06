@@ -17,7 +17,7 @@ export default function SignUp() {
         <NewInput placeholder="Username" type="text" ref={usernameRef} />
         <NewInput placeholder="Password" type="password" ref={passwordRef} />
       </form>
-      <button className="transition-colors w-full bg-violet-600 rounded-md p-2 my-8 focus:bg-green-500 focus:shadow-green-500 focus:text-slate-700 shadow-lg shadow-violet-400 font-semibold text-lg">Submit</button>
+      <button className="transition-colors w-full bg-violet-600 rounded-md p-2 my-8 focus:bg-green-500 focus:text-slate-700 font-semibold text-lg">Submit</button>
     </div>
   )
 }
