@@ -1,22 +1,23 @@
+import { useRef } from "react";
+import Icon from "../components/Icon";
+import NewInput from "../components/NewInput";
+
 export default function SignUp() {
+  const usernameRef = useRef(null);
+  const passwordRef = useRef(null);
+
+  const submitReq = () => {
+    //captcha stuff and send req to server
+  }
+
   return (
-    <div className="max-w-screen-md mx-auto m-4 px-16 py-4 border-4 border-slate-500 rounded-md text-purple-200">
-      <div className="w-full font-semibold text-2xl mb-4">Sign Up</div>
+    <div className="max-w-screen-md mx-auto mt-8 px-16 py-4 border-4 border-slate-500 rounded-md text-purple-200">
+      <div className="flex justify-center items-center"><Icon className="w-8 stroke-purple-200 m-4" /><div className="font-semibold text-2xl my-4 text-center">Sign Up</div></div>
       <form className="w-full">
-        <label className="block">
-          <span className="after:content-['*'] after:ml-0.5 after:text-red-500">
-            Username
-          </span>
-          <input aria-placeholder="username" className="rounded-md transition-colors text-center p-2 bg-slate-600 w-full hover:bg-slate-500 focus:bg-slate-500 outline-none"></input>
-        </label>
-        <label className="block mt-4">
-          <span className="after:content-['*'] after:ml-0.5 after:text-red-500">
-            Password
-          </span>
-          <input aria-placeholder="password" type="password" className="rounded-md transition-colors text-center p-2 bg-slate-600 w-full hover:bg-slate-500 focus:bg-slate-500 outline-none"></input>
-        </label>
+        <NewInput placeholder="Username" type="text" ref={usernameRef} />
+        <NewInput placeholder="Password" type="password" ref={passwordRef} />
       </form>
-      <button className="w-full bg-violet-600 rounded-md p-2 my-8">Submit</button>
+      <button className="transition-colors w-full bg-violet-600 rounded-md p-2 my-8 focus:bg-green-500 focus:shadow-green-500 focus:text-slate-700 shadow-lg shadow-violet-400 font-semibold text-lg">Submit</button>
     </div>
   )
 }
