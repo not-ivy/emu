@@ -23,7 +23,7 @@ export default function Index() {
           </div>
         </div>
         <div className="p-20 md:p-32" />
-        <div className="max-w-screen-sm">
+        <div className="max-w-screen-sm fade-in">
           <p className="font-extrabold text-5xl">We are building the fluffiest social network.</p>
           <div className="p-4" />
           <div className="flex justify-between font-semibold text-xl flex-col md:flex-row ">
