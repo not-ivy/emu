@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Tabs from "../components/Tabs";
 import Search from "../components/Search";
 import Profile from "../components/Profile";
+import TopBar from "../components/TopBar";
 
 type Tabs = 'home' | 'messages' | 'profile' | 'more';
 
@@ -15,18 +16,7 @@ export default function Home() {
         <title>Puroto</title>
       </Head>
       <div className="p-4 md:px-20 text-purple-200 grid grid-cols-7 grid-flow-row gap-x-4 md:gap-x-10 gap-y-4 md:gap-y-10">
-        <div className="col-span-7 flex justify-between items-center">
-          <Link href='/'>
-            <span className="flex items-center cursor-pointer">
-              <Icon className="stroke-violet-700 h-10 m-4" />
-              <span className="text-3xl font-bold hidden md:block">Puroto</span>
-            </span>
-          </Link>
-          <div className="flex items-center justify-between">
-            <Search />
-            <Profile />
-          </div>
-        </div>
+        <TopBar />
         <nav className="relative col-span-2 flex flex-col items-end border-purple-200 border-r md:border-none">
           <div className="sticky top-4">
             <Tabs />
