@@ -3,13 +3,7 @@
 @tailwind utilities;
 
 body {
-  background-color: rgb(30 41 59);
-}
-
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: rgb(30 41 59 );
-  }
+  background-color: var(--background);
 }
 
 @layer utilities {
