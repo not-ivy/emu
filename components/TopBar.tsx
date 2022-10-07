@@ -8,7 +8,7 @@ export default function TopBar() {
     <div className="col-span-7 flex justify-between items-center text-purple-200">
       <Link href='/'>
         <span className="flex items-center cursor-pointer">
-          <Icon className="stroke-violet-700 h-10 m-4" />
+          <Icon className="stroke-hr-f-med h-10 m-4" />
           <span className="text-3xl font-bold hidden md:block">Puroto</span>
         </span>
       </Link>
