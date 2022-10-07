@@ -37,9 +37,9 @@ export default function User() {
       <Head>
         <title>{username}</title>
       </Head>
-      <div className="p-4 text-purple-200">
+      <div className="p-4 text-hr-f-high">
         <TopBar />
-        <div className="flex justify-around pb-4 border-b border-purple-200 mx-auto flex-col items-start md:flex-row md:items-end">
+        <div className="flex justify-around pb-4 border-b border-hr-b-high mx-auto flex-col items-start md:flex-row md:items-end">
           <div className="font-semibold text-3xl w-full text-center md:w-min md:mx-4">
             {user.username}
           </div>
