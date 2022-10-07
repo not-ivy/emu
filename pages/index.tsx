@@ -19,7 +19,7 @@ export default function Index() {
       </div>
       <div className="p-20 md:p-32" />
       <div className="max-w-screen-sm fade-in">
-        <p className="font-extrabold text-5xl">We are building the fluffiest social network.</p>
+        <p className="font-extrabold text-5xl text-gradient">We are building the fluffiest social network.</p>
         <div className="p-4" />
         <div className="flex justify-between font-semibold text-xl flex-col md:flex-row ">
           <a className="flex items-center text-hr-f-high" target="_blank" href="#"><div className="m-2"><FaGithub size='2rem' /></div> Github</a>

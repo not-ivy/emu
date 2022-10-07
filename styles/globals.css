@@ -13,6 +13,14 @@ body {
   .expand {
     animation: expand cubic-bezier(0.25, 1, 0.5, 1) 1s;
   }
+  .text-gradient {
+    background-clip: text;
+    background: linear-gradient(to right, var(--f_med) 20%, var(--b_med) 80%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-animation ease-in 1s;
+    background-size: 200% auto;
+  }
 }
 
 @keyframes fade-in {
@@ -23,4 +31,9 @@ body {
 @keyframes expand {
   from { width: 0%; }
   to { width: 100%; }
+}
+
+@keyframes gradient-animation {
+  from { background-size: 50% auto; }
+  to { background-size: 200% auto; }
 }
