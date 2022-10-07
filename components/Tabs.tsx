@@ -6,7 +6,7 @@ export default function Tabs() {
   const setSelectedPanel = (selectedPanel: Panels) => { usePanel.setState({ selectedPanel }) }
 
   return (
-    <div className="text-hr-f-med font-bold text-2xl flex flex-col items-end">
+    <div className="text-hr-f-low font-bold text-2xl flex flex-col items-end">
       <button aria-label='home' className={`${selected === 'home' ? 'text-hr-f-high' : ''} flex items-center`} onClick={() => {setSelectedPanel('home')}}>
         {selected === 'home' ? <HiHome className="w-10 h-10 m-2 md:w-8 md:h-8" /> : <HiOutlineHome className='w-10 h-10 m-2 md:w-8 md:h-8' />}
         <span className="hidden md:block">Home</span>
