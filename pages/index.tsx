@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import Link from 'next/link';
 import { FaDiscord, FaGithub, FaTwitter } from 'react-icons/fa';
 
@@ -9,7 +8,7 @@ export default function Index() {
     <div className='p-4 md:px-20 text-hr-f-high'>
       <div className='flex justify-between items-center'>
         <span className="flex items-center">
-          <Icon className="stroke-hr-f-med h-10 m-4" />
+          <Icon className="stroke-hr-b-inv h-10 m-4" />
           <span className="text-3xl font-bold">Puroto</span>
         </span>
         <div className="flex justify-around flex-col lg:flex-row">
