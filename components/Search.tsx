@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { HiOutlineSearch } from "react-icons/hi";
+import { HiOutlineSearch, HiX } from "react-icons/hi";
 import { BiCommand } from 'react-icons/bi';
 import { useSearch } from "../hooks/search";
 
@@ -39,6 +39,7 @@ export default function Search() {
         <div className="absolute left-2/4 top-1/4 -translate-x-2/4 -translate-y-2/4 bg-slate-600 flex flex-row rounded-lg items-center h-10 p-8">
           <HiOutlineSearch className="w-6 h-6 mr-0 md:mr-4 text-purple-200 hidden md:block" />
           <input ref={inputRef} className="bg-slate-600 text-purple-200 caret-purple-200 outline-none" placeholder="Search"></input>
+          <HiX className="cursor-pointer" onClick={() => {inputRef.current.value ? inputRef.current.value = '' : setVisibility(false)}} />
         </div>
       </div>
     </>
