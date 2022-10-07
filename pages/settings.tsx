@@ -30,15 +30,14 @@ export default function Settings() {
   if (themesMap.size !== themes.length) { return <></> }
 
   return (
-    <div className="flex flex-col">
+    <div className="grid grid-cols-4 grid-flow-row gap-y-4">
       {
         themes.map((t) => (
-          <div className="flex" key={`theme-${t}`}>
-            <input type="radio" value={t} />
-            <span>{t}</span>
-            <div className="flex">
+          <div className="flex flex-col col-span-2 row-span-1" key={`theme-${t}`}>
+            <div><input type="radio" value={t} /><span>{t}</span></div>
+            <div className="flex w-min rounded-md" style={{background: themesMap.get(t).background}}>
               {Object.keys(themesMap.get(t)).map((key, index) => (
-                <div key={`theme-${t}-${key}`} className={`h-5 w-5 rounded-full`} style={{ background: themesMap.get(t)[key].toLowerCase() }} />
+                <div key={`theme-${t}-${key}`} className="h-5 w-5 rounded-full m-2" style={{ background: themesMap.get(t)[key].toLowerCase() }} />
               ))}
             </div>
           </div>
