@@ -12,9 +12,9 @@ export default function Index() {
           <span className="text-3xl font-bold">Puroto</span>
         </span>
         <div className="flex justify-around flex-col lg:flex-row">
-          <button className="text-xl font-bold bg-hr-b-low px-7 py-3 m-1 rounded-md">Support Us</button>
+          <button className="text-xl font-bold bg-hr-b-med px-7 py-3 m-1 rounded-md">Support Us</button>
           <Link href='/signup'><button className="text-xl font-bold bg-hr-b-med px-7 py-3 m-1 rounded-md">Sign Up</button></Link>
-          <Link href='/home'><button className="text-xl font-bold bg-hr-b-high px-7 py-3 m-1 rounded-md">Home</button></Link>
+          <Link href='/home'><button className="text-xl font-bold bg-hr-b-med px-7 py-3 m-1 rounded-md">Home</button></Link>
         </div>
       </div>
       <div className="p-20 md:p-32" />
