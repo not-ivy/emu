@@ -33,23 +33,27 @@ export default function ThemeSetting() {
     setSelected(themesMap.get('apollo.svg'))
   }, [themesMap])
 
+  useEffect(() => {
+    if (!selected) return;
+    document.body.style.background = selected.background;
+  }, [selected])
+
   if (!themes) { return (<BlankSlate title="Loading" body="This won't take long... (1/3)" />) }
   if (themes instanceof Error) { return (<BlankSlate title="Error" body={themes.toString()} />) }
   if (themesMap.size !== themes.length) { return (<BlankSlate title="Loading" body="This won't take long... (2/3)" />) }
   if (!selected) { return (<BlankSlate title="Loading" body="This won't take long... (3/3)" />) }
+
   return (
     <div className="mx-auto my-4 p-4 rounded-md max-w-screen-md" style={{ background: selected.background, color: selected.f_high }}>
       <div className="flex items-center">
-        <Link href='/settings'><HiArrowLeft className="w-9 h-9 p-2 cursor-pointer" /></Link>
-        <h1 className="text-3xl font-medium m-4">Themes</h1>
+        <Link href='/settings'><HiArrowLeft className="w-6 h-6 mx-3 cursor-pointer" /></Link>
+        <h1 className="text-3xl font-medium">Themes</h1>
       </div>
-      <hr style={{borderColor: selected.f_med}} />
+      <hr className="m-4" style={{borderColor: selected.f_med}} />
       <div className="w-full flex flex-col items-center">
         <span className="w-3/4 p-4 text-lg font-medium rounded-md" style={{ background: selected.b_med }}>
-          Click on the *.svg button to see all the themes! <br />
-          <span style={{ color: selected.f_med }}>Lorem ipsum dolor</span> sit amet consectetur adipisicing elit.<br />
-          Enim aspernatur dolorum, quos, modi corrupti magnam impedit eius<span style={{ color: selected.f_low }}>(repudiandae iure, reiciendis vel)</span>.<br />
-          Tenetur dolores vero sapiente officia <span style={{ color: selected.f_inv }}>id corrupti repellendus quis.</span><br />
+        <span style={{ color: selected.f_med }}>Click on the <span style={{ color: selected.f_low }}>*</span>.svg button</span> to see all the themes! <br />
+        Then click the checkmark button to accept the theme!
         </span>
       </div>
       <div className="flex flex-col items-center">
