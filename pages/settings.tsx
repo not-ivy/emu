@@ -12,7 +12,7 @@ export default function Settings() {
         <hr className="border-hr-f-med my-4" />
         <div className="flex flex-col">
           <Link href='/settings/theme'>
-            <div className="flex items-center justify-around py-4 hover:bg-hr-b-med cursor-pointer">
+            <div className="transition-colors flex items-center justify-around py-4 hover:bg-hr-b-med cursor-pointer">
               <span className="font-medium text-xl">Theme</span>
               <HiArrowRight />
             </div>
