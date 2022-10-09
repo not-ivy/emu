@@ -38,7 +38,7 @@ export default function Search() {
       <div className={`${visibility ? 'block' : 'hidden'} w-screen h-screen absolute top-0 left-0 backdrop-brightness-50 backdrop-blur-md bg-opacity-0 z-50`}>
         <div className="absolute left-2/4 top-1/4 -translate-x-2/4 -translate-y-2/4 bg-hr-b-med flex flex-row rounded-lg items-center h-10 p-8">
           <HiOutlineSearch className="w-6 h-6 mr-0 md:mr-4 text-hr-f-high hidden md:block" />
-          <input ref={inputRef} className="bg-hr-b-med text-hr-f-high caret-hr-f-high outline-none placeholder:text-hr-f-low" placeholder="Search"></input>
+          <input ref={inputRef} className="bg-hr-b-med text-hr-f-high caret-hr-f-med outline-none placeholder:text-hr-f-low" placeholder="Search"></input>
           <HiX className="cursor-pointer text-hr-f-high w-10 h-10 p-2" onClick={() => {inputRef.current.value ? inputRef.current.value = '' : setVisibility(false)}} />
         </div>
       </div>
