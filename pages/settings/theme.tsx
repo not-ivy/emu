@@ -46,6 +46,7 @@ export default function ThemeSetting() {
       <hr style={{borderColor: selected.f_med}} />
       <div className="w-full flex flex-col items-center">
         <span className="w-3/4 p-4 text-lg font-medium rounded-md" style={{ background: selected.b_med }}>
+          Click on the *.svg button to see all the themes! <br />
           <span style={{ color: selected.f_med }}>Lorem ipsum dolor</span> sit amet consectetur adipisicing elit.<br />
           Enim aspernatur dolorum, quos, modi corrupti magnam impedit eius<span style={{ color: selected.f_low }}>(repudiandae iure, reiciendis vel)</span>.<br />
           Tenetur dolores vero sapiente officia <span style={{ color: selected.f_inv }}>id corrupti repellendus quis.</span><br />
