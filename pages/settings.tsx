@@ -40,7 +40,7 @@ export default function Settings() {
   return (
     <div className="mx-auto my-4 p-4 rounded-md w-4/5" style={{ background: selected.background, color: selected.f_high }}>
       <div className="w-full flex flex-col items-center">
-        <span className="w-3/4 p-2 text-lg font-medium rounded-md" style={{background: selected.b_med}}>
+        <span className="w-3/4 p-4 text-lg font-medium rounded-md" style={{background: selected.b_med}}>
           <span style={{ color: selected.f_med }}>Lorem ipsum dolor</span> sit amet consectetur adipisicing elit.<br />
           Enim aspernatur dolorum, quos, modi corrupti magnam impedit eius<span style={{ color: selected.f_low }}>(repudiandae iure, reiciendis vel)</span>.<br />
           Tenetur dolores vero sapiente officia <span style={{color: selected.f_inv}}>id corrupti repellendus quis.</span><br />
